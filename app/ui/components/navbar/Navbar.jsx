@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React, { Fragment, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon,  MenuIcon, XIcon } from '@heroicons/react/outline';
 import { GoSignIn } from 'react-icons/go';
@@ -16,6 +16,8 @@ function classNames(...classes) {
 export const Navbar =  () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const [theme, setTheme] = useState(null);
+  const navigate = useNavigate();
+
 
 	useEffect(() => {
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -36,6 +38,7 @@ export const Navbar =  () => {
 			document.documentElement.classList.remove('dark');
 		}
 	}, [theme]);
+
   useEffect(() => {
     AOS.init({
       delay: 200,
@@ -70,19 +73,19 @@ export const Navbar =  () => {
                     {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                     <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <Link
-                    to={RoutePaths.ROOT}
+                    <button
+                     onClick={()=>navigate("/")}
                       type="button"
-                      className="text-md font-bold shadow-lg relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-sky-500/80  hover:text-white rounded-r-full"
+                      className="text-md font-bold shadow-lg shadow-cyan-900/50 relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-sky-500/80  hover:text-white rounded-r-full"
                     >
                       <span>Home</span>
-                    </Link>
+                    </button>
                   </div>
                  
                 </div>
                     <Menu as="div" className="relative inline-block text-left py-5">
                     <div>
-                      <Menu.Button className="text-md font-bold shadow-lg relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-sky-500/80  hover:text-white rounded-r-full">
+                      <Menu.Button className="text-md font-bold shadow-lg shadow-cyan-900/50 relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-sky-500/80  hover:text-white rounded-r-full">
                        Company
                         <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
                       </Menu.Button>
@@ -100,66 +103,68 @@ export const Navbar =  () => {
                         <div onClick={() => setNavbarOpen(!open)} className="py-1">
                           <Menu.Item>
                             {({ active }) => (
-                              <Link to={RoutePaths.ABOUT}
+                              <button onClick={()=>navigate("/about")}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                                About
-                              </Link>
+                              </button>
                             )}
                           </Menu.Item>
                            <Menu.Item>
                             {({ active }) => (
-                              <Link to={'#'}
+                              <button
+                              onClick={()=>navigate("/skills")}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                           Skills
-                              </Link>
+                              </button>
                             )}
                           </Menu.Item>
                           <Menu.Item>
                             {({ active }) => (
-                              <Link to={'#'}
+                              <button 
+                              onClick={()=>navigate("/projects")}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                           Projects
-                              </Link>
+                              </button>
                             )}
                           </Menu.Item>
                           <Menu.Item>
                             {({ active }) => (
-                              <Link
-                              to={RoutePaths.TESTIMONIALS}
+                              <button
+                              onClick={()=>navigate("/testimonials")}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                           Testimonials
-                              </Link>
+                              </button>
                             )}
                           </Menu.Item>
                         </div>
                         <div className="py-1">
                           <Menu.Item>
                             {({ active }) => (
-                              <Link
-                              to={RoutePaths.CONTACT}
+                              <button
+                              onClick={()=>navigate("/contact")}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                             Contact
-                              </Link>
+                              </button>
                             )}
                           </Menu.Item>
                         </div>
@@ -173,23 +178,23 @@ export const Navbar =  () => {
                     <button
                       type="button"
                       onClick={handleThemeSwitch}
-                      className="bg-slate-600 text-md font-bold shadow-lg dark:bg-slate-900 relative inline-flex items-center px-3 py-1 border border-transparent dark:text-white hover:bg-sky-500/80 hover:text-white rounded-r-full"
+                      className="bg-transparent text-md font-bold shadow-lg shadow-cyan-900/50 dark:bg-slate-900 relative inline-flex items-center px-3 py-1 border border-transparent dark:text-white hover:bg-sky-500/80 hover:text-white rounded-r-full"
                     >
-                      {theme === 'dark' ? '🌞' : '🌙'}
+                      {theme === 'dark' ? '🌙' : '🌞'}
                     </button>
                     </div>
                 </div>
               
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <Link
-                      to={RoutePaths.LOGINFORM}
+                    <button
+                     onClick={()=>navigate("/loginForm")}
                       type="button"
-                      className="bg-slate-50 backdrop:text-md font-bold shadow-sm dark:bg-slate-800 relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full"
+                      className="bg-slate-50 backdrop:text-md font-bold shadow-lg shadow-cyan-900/50 dark:bg-slate-900 relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full"
                     >
                       <GoSignIn className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
                       <span>Login</span>
-                    </Link>
+                    </button>
                   </div>
                  
                 </div>
@@ -204,14 +209,14 @@ export const Navbar =  () => {
                     <Link
                       to={RoutePaths.ROOT}
                       type="button"
-                      className="bg-slet-50 text-md font-bold shadow-sm relative inline-flex items-center px-3 py-1 border border-transparent dark:text-slate-50 hover:bg-sky-500/80  hover:text-white rounded-r-full"
+                      className="bg-slet-50 text-md font-bold shadow-md shadow-cyan-900/50 relative inline-flex items-center px-3 py-1 border border-transparent dark:text-slate-50 hover:bg-sky-500/80  hover:text-white rounded-r-full"
                     >
                       <span>Home</span>
                     </Link>
                   </div>
-                 <Menu as="div" className="relative z-30 inline-block text-left py-5">
+                 <Menu as="div" className="relative z-30 inline-block text-left py-3">
                     <div>
-                      <Menu.Button className="bg-slate-50 backdrop:text-md font-bold shadow-sm dark:bg-slate-800 relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full">
+                      <Menu.Button className="bg-slate-50 backdrop:text-md font-bold shadow-md shadow-cyan-900/50 dark:bg-slate-800 relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full">
                        Company
                         <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
                       </Menu.Button>
@@ -243,7 +248,7 @@ export const Navbar =  () => {
                            <Menu.Item>
                             {({ active }) => (
                               <Link
-                                to={'#'}
+                              to={RoutePaths.PROJECTS}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
@@ -269,7 +274,7 @@ export const Navbar =  () => {
                           <Menu.Item>
                             {({ active }) => (
                               <Link
-                                to={'#'}
+                              to={RoutePaths.SKILLS}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'

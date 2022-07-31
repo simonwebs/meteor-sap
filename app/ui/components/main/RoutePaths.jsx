@@ -6,6 +6,8 @@ export const RoutePaths = {
     ABOUT: 'about',
     CONTACTLIST: 'contactList',
     CONTACT: 'contact',
+    SKILLS: 'skills',
+    PROJECTS: 'projects',
    
 
 };
