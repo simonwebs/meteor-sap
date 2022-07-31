@@ -4,10 +4,10 @@ import { Tab } from '@headlessui/react'
 
 const tabs = [
   {
-    name: 'Design',
+    name: 'Expenses Tracker',
     features: [
       {
-        name: 'Adaptive and modular',
+        name: 'Node.js + React + Ant Design + CSS + Lottie',
         description:
           'The Organize base set allows you to configure and evolve your setup as your items and habits change. The included trays and optional add-ons are easily rearranged to achieve that perfect setup.',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-01.jpg',
@@ -16,10 +16,10 @@ const tabs = [
     ],
   },
   {
-    name: 'Material',
+    name: 'LSMS',
     features: [
       {
-        name: 'Natural wood options',
+        name: 'Meteor + React + Tailwind',
         description:
           'Organize has options for rich walnut and bright maple base materials. Accent your desk with a contrasting material, or match similar woods for a calm and cohesive look. Every base is hand sanded and finished.',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-02.jpg',
@@ -29,10 +29,10 @@ const tabs = [
     ],
   },
   {
-    name: 'Considerations',
+    name: 'MEMBERSHIP',
     features: [
       {
-        name: 'Helpful around the home',
+        name: 'Meteor + React + Tailwind-ui',
         description:
           "Our customers use Organize throughout the house to bring efficiency to many daily routines. Enjoy Organize in your workspace, kitchen, living room, entry way, garage, and more. We can't wait to see how you'll use it!",
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-03.jpg',
@@ -41,10 +41,10 @@ const tabs = [
     ],
   },
   {
-    name: 'Included',
+    name: 'Quiz App',
     features: [
       {
-        name: "Everything you'll need",
+        name: "Meteor + React",
         description:
           'The Organize base set includes the pen, phone, small, and large trays to help you group all your essential items. Expand your set with the drink coaster and headphone stand add-ons.',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-04.jpg',
@@ -65,7 +65,7 @@ export const Projects = () => {
             <div className="max-w-2xl mx-auto px-4 lg:px-0 lg:max-w-none">
               <div className="max-w-3xl">
                 <h2 id="features-heading" className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                  Technical Specifications
+                  Projects
                 </h2>
                 <p className="mt-4 text-gray-500">
                   The Organize modular system offers endless options for arranging your favorite and most used items. Keep

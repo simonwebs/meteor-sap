@@ -4,6 +4,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Testimonials } from '../testimonial/Testimonials';
 import { Link } from 'react-router-dom';
+import { Projects } from '../projects/Projects';
+import { Skills } from '../skills/Skills';
+import { About } from '../about/About';
+import { Contact } from '../contact/Contact'
 
 
 export const Home = () => {
@@ -44,7 +48,7 @@ export const Home = () => {
               </div>
               <div className="mt-3 rounded-md sm:mt-0 sm:ml-3">
                 <Link
-                  to="playGround"
+                  to="projects"
                   className="inline-flex items-center px-7 py-2 border border-transparent text-md font-medium rounded-r-full shadow-lg shadow-cyan-900/50 text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500" data-aos="fade-left"
                 >
                   Projects
@@ -78,7 +82,11 @@ export const Home = () => {
             </div>
           </div>
         </section>
+        <About />
+        <Skills />
+        <Projects />
     <Testimonials />
+    <Contact />
  
           </main>
   )

@@ -19,7 +19,7 @@ export const About = () => {
       <div id='about' className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
           <div className="space-y-5 sm:space-y-4">
-            <h2 className="text-3xl dark:text-cyan-400 font-extrabold tracking-tight sm:text-4xl">About Us</h2>
+            <h2 className="text-3xl dark:text-cyan-400 font-extrabold tracking-tight sm:text-4xl">About</h2>
             <p className="text-xl dark:text-slate-300">
               Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue ultrices sed arcu condimentum
               vestibulum suspendisse. Volutpat eu faucibus vivamus eget bibendum cras.
