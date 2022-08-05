@@ -9,7 +9,6 @@ import { About } from '../../pages/about/About';
 import { Contact } from '../../pages/contact/Contact';
 import { Testimonials } from '../../pages/testimonial/Testimonials';
 import { ContactList } from '../../pages/contact/ContactList';
-import  { LoginForm } from '../../auth/LoginForm ';
 import { Projects } from '../../pages/projects/Projects';
 import { Skills } from '../../pages/skills/Skills'
 
@@ -22,7 +21,6 @@ import { Skills } from '../../pages/skills/Skills'
       <ReactRoutes>
            <Route path={RoutePaths.ROOT} element={<App />}>
             <Route index element={<Home />} />
-            <Route element={<LoginForm />} path={RoutePaths.LOGINFORM} />
             <Route element={<ContactList/>} path={RoutePaths.CONTACTLIST} />
             <Route element={<Testimonials/>} path={RoutePaths.TESTIMONIALS} />
             <Route element={<About/>} path={RoutePaths.ABOUT} />
