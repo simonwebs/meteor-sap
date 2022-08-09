@@ -226,7 +226,7 @@ export const Navbar = () => {
                   <button
                     onClick={() => navigate('/contact')}
                     type="button"
-                    className="bg-slate-50 backdrop:text-md font-bold shadow-lg shadow-cyan-900/50 dark:text-slate-900 relative inline-flex items-center px-3 py-0 border border-transparent  hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full"
+                    className="bg-transparent text-md font-bold shadow-lg shadow-cyan-900/50 dark:bg-white hover:bg-sky-500/80 hover:text-white relative inline-flex items-center px-3 py-1 border border-transparent dark:text-slate-900 dark:hover:bg-sky-500/80 dark:hover-bg-white dark:hover:text-white rounded-r-full"
                   >
                     <FcBusinessContact
                       className="-ml-1 mr-2 h-5 w-5"

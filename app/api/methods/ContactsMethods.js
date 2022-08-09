@@ -3,17 +3,11 @@ import { check } from 'meteor/check';
 import { ContactsCollection } from '../collections/ContactsCollection';
 
 Meteor.methods({
-  'contacts.insert'({
-    name,
-    email,
-    subject,
-    message,
-
-  }) {
+  'contacts.insert'({ name, email, agreed, subject, message }) {
     check(name, String);
     check(email, String);
     check(subject, String);
-    check(message, String);
+    check(agreed, Boolean);
 
     if (!name) {
       throw new Meteor.Error('Name is required.');
@@ -23,14 +17,18 @@ Meteor.methods({
     }
     if (!subject) {
       throw new Meteor.Error('Subject is required.');
-     }
-      if (!message) {
-        throw new Meteor.Error('Message is required.');
-      }
+    }
+    if (!message) {
+      throw new Meteor.Error('Message is required.');
+    }
+    if (!agreed) {
+      throw new Meteor.Error('Message is required.');
+    }
 
     return ContactsCollection.insert({
       name,
       email,
+      agreed,
       subject,
       message,
       createdAt: new Date(),
@@ -39,10 +37,7 @@ Meteor.methods({
   'contacts.archive'({ contactId }) {
     check(contactId, String);
 
-    ContactsCollection.update(
-      { _id: contactId },
-      { $set: { archived: true } }
-    );
+    ContactsCollection.update({ _id: contactId }, { $set: { archived: true } });
   },
   'contacts.remove'({ contactId }) {
     check(contactId, String);

@@ -53,6 +53,7 @@ export const ContactList = () => {
                             <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Name :</span>&nbsp;{contact.name}</div>
                                    <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Subject : </span>&nbsp;{contact.subject}</div>
                                    <div className="text-left dark:text-slate-300 text-sm0"><span className='text-sky-400'>Message : </span>&nbsp;{contact.message}</div>
+                                   <div className="text-left dark:text-slate-300 text-sm0"><span className='text-sky-400'>Agreed : </span>&nbsp;{contact.agreed}</div>
                                     <div className="-mt-px flex divide-x divide-gray-200">
               <div className="w-0 flex-1 flex">
                 <a

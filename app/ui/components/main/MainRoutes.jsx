@@ -12,8 +12,7 @@ import { ContactList } from '../../pages/contact/ContactList';
 import { Projects } from '../../pages/projects/Projects';
 import { Skills } from '../../pages/skills/Skills'
 
-
-  export const MainRoutes = () => {
+export const MainRoutes = () => {
    
   return (
     <Fragment>
