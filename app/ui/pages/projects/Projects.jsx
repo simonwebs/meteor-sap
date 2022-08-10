@@ -1,15 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Fragment } from 'react';
 import { Tab } from '@headlessui/react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const tabs = [
   {
     name: 'Expenses Tracker',
     features: [
       {
-        name: 'Node.js + React + Ant Design + CSS + Lottie',
+        name: 'MongoDB. Express, React, Node.js',
         description:
-          'The Organize base set allows you to configure and evolve your setup as your items and habits change. The included trays and optional add-ons are easily rearranged to achieve that perfect setup.',
+          'This app was develop with Node.js, React, Tailwindcss, mongoDB and Ant Design. It is use by Cedar Christian Bilingual School to track their income and expense.',
         imageSrc:
           'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-01.jpg',
         imageAlt:
@@ -21,9 +23,9 @@ const tabs = [
     name: 'LSMS',
     features: [
       {
-        name: 'Meteor + React + Tailwind',
+        name: 'Meteor, React, Tailwind',
         description:
-          'Organize has options for rich walnut and bright maple base materials. Accent your desk with a contrasting material, or match similar woods for a calm and cohesive look. Every base is hand sanded and finished.',
+          'This app was develop with Node.js, React, Tailwindcss and Ant Design. It is use by Cedar Christian Bilingual School to track their income and expense',
         imageSrc:
           'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-02.jpg',
         imageAlt:
@@ -66,8 +68,16 @@ function classNames(...classes) {
 }
 
 export const Projects = () => {
+  useEffect(() => {
+    AOS.init({
+      delay: 200,
+      duration: 1200,
+      once: false,
+      // @ts-ignore
+    }, []);
+  });
   return (
-    <div className="bg-transparent dark:bg-slate-900 shadow-sm shadow-sky-400">
+    <div className="bg-transparent dark:bg-slate-900 shadow-sm shadow-cyan-900/50">
       <section
         aria-labelledby="features-heading"
         className="max-w-6xl mx-auto py-32 sm:px-2 lg:px-8"
@@ -76,18 +86,16 @@ export const Projects = () => {
           <div className="max-w-3xl">
             <h2
               id="features-heading"
-              className="text-4xl font-bold text-center dark:text-white"
+              className="text-4xl font-bold text-center dark:text-white" data-aos="flip-left"
             >
               Projects
             </h2>
             <p className="mt-4 text-slate-500 dark:text-gray-500">
-              The Organize modular system offers endless options for arranging
-              your favorite and most used items. Keep everything at reach and in
-              its place, while dressing up your workspace.
+              These are some of the projects am working on.
             </p>
           </div>
 
-          <Tab.Group as="div" className="mt-4">
+          <Tab.Group as="div" className="mt-4" data-aos="fade-left">
             <div className="-mx-4 flex overflow-x-auto sm:mx-0">
               <div className="flex-auto px-4 border-b border-sky-200 sm:px-0">
                 <Tab.List className="-mb-px flex space-x-10">
@@ -119,10 +127,10 @@ export const Projects = () => {
                       className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8"
                     >
                       <div className="mt-6 lg:mt-0 lg:col-span-5">
-                        <h3 className="text-lg font-medium text-gray-900">
+                        <h3 className="text-lg font-medium text-gray-900 dark:text-sky-400">
                           {feature.name}
                         </h3>
-                        <p className="mt-2 text-sm text-gray-500">
+                        <p className="mt-2 text-sm text-gray-500 dark:text-slate-300">
                           {feature.description}
                         </p>
                       </div>

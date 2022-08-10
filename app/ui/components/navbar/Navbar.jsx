@@ -81,7 +81,7 @@ export const Navbar = () => {
                   <Link to={RoutePaths.ROOT}>
                     <img
                       className="hidden lg:block h-8 w-auto"
-                      src="/log/Logo.svg"
+                      src="/img/simon.png"
                       alt="Meteor"
                     />
                   </Link>

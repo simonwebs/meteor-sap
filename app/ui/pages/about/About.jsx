@@ -5,12 +5,11 @@ import 'aos/dist/aos.css';
 const about = [
   {
     name: 'Simon Agbey',
-    role: 'Co-Founder / CEO',
     imageUrl: './img/simon.png',
     bio:
-      'FullStack developer specialist in web app. Founder of Solution Web Dev.',
-    twitterUrl: '#',
-    linkedinUrl: '#',
+      'FullStack web developer specialist in web app. Founder of Solution Web Dev.',
+    twitterUrl: 'https://twitter.com/SimonAgbey3',
+    linkedinUrl: 'https://www.linkedin.com/in/simon-webdev-95169b23b',
   },
   // More people...
 ];
@@ -28,15 +27,16 @@ export const About = () => {
   return (
     <div className="mt-16 bg-transparent dark:bg-slate-900 shadow-md">
       <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+        <h2 className="text-3xl dark:text-sky-400 font-extrabold tracking-tight sm:text-4xl" data-aos="flip-left">
+          About
+        </h2>
         <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
           <div className="space-y-5 sm:space-y-4">
-            <h2 className="text-3xl dark:text-sky-400 font-extrabold tracking-tight sm:text-4xl" data-aos="flip-left">
-              About
-            </h2>
+
             <p className="text-xl dark:text-slate-300" data-aos="flip-left">
-              Nulla quam felis, enim faucibus proin velit, ornare id pretium.
-              Augue ultrices sed arcu condimentum vestibulum suspendisse.
-              Volutpat eu faucibus vivamus eget bibendum cras.
+            I'm a Fullstack web developer located in Ghana. I have a passion for frontend and backend development.
+              I am well organised person, believe in problem solving in diverse way.
+              One thing I like about myself is I'm not tired of learning new things.
             </p>
           </div>
           <div className="lg:col-span-2" data-aos="fade-left">
@@ -57,8 +57,7 @@ export const About = () => {
                     <div className="sm:col-span-2">
                       <div className="space-y-4">
                         <div className="text-lg dark:text-slate-300 leading-6 font-medium space-y-1">
-                          <h3>{about.name}</h3>
-                          <p className="dark:text-sky-400">{about.role}</p>
+                          <h3 className="dark:text-sky-400">{about.name}</h3>
                         </div>
                         <div className="text-lg">
                           <p className="dark:text-slate-300">{about.bio}</p>

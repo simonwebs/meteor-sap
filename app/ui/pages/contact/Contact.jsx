@@ -83,19 +83,8 @@ export const Contact = () => {
             Contact Me
           </h2>
 
-          <div className="relative py-4">
-            <div
-              className="absolute inset-0 flex items-center"
-              aria-hidden="true"
-            >
-              <div
-                className="w-full border-t dark:border-sky-500"
-                data-aos="fade-up"
-              />
-            </div>
-          </div>
         </div>
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-4xl mx-auto shadow-sm shadow-cyan-900/50">
           <div className="relative z-20 bg-slate-100 dark:bg-slate-900 rounded p-8">
             <form action="" data-aos="fade-up">
               {error && <ErrorAlert message={error} />}
@@ -182,7 +171,7 @@ export const Contact = () => {
             
               <button
                 onClick={saveContact}
-                className="mt-4 inline-flex items-center px-7 py-2 border border-transparent text-md font-medium rounded-r-full shadow-lg shadow-cyan-900/50 text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+                className="mt-4 inline-flex items-center px-7 py-2 border border-transparent text-md font-medium rounded-r-full shadow-lg shadow-cyan-900/50 text-white bg-cyan-600 hover:bg-cyan-700"
                                 data-aos="fade-left"
               >
                 <span>Send Message</span>

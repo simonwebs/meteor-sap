@@ -44,7 +44,7 @@ export const Testimonials = () => {
         className="mt-16 bg-transparent dark:bg-slate-900  dark:text-slate-300"
         data-aos="fade-up"
       >
-        <section className="py-16 bg-transparent shadow-sm shadow-sky-400 dark:bg-slate-900">
+        <section className="py-16 bg-transparent shadow-sm shadow-cyan-900/50 dark:bg-slate-900">
           <div className="mx-auto max-w-2xl md:text-center">
             <h2 className="text-4xl font-bold text-center dark:text-white">
               Testimonals

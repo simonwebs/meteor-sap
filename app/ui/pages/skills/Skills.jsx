@@ -4,8 +4,8 @@ import React from 'react';
 export const Skills = () => {
   return (
     <>
-      <section className="bg-transparent dark:bg-slate-900 shadow-md">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 mt-32 ">
+      <section className="bg-transparent shadow-sm shadow-cyan-900/50 dark:bg-slate-900 shadow-md">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 mt-16 ">
           <h2 className="text-4xl font-bold text-center dark:text-white">
             Skills
           </h2>
@@ -15,15 +15,15 @@ export const Skills = () => {
                 className="text-3xl font-extrabold dark:text-sky-400 sm:text-4xl"
                 data-aos="fade-right"
               >
-                These are some of the skills am good using.
+               My skills and experience.
               </h2>
               <p
                 className="mt-3 max-w-3xl text-lg text-slate-900 dark:text-slate-200"
                 data-aos="fade-left"
               >
-                I have skills in Html, Css/scss, JavaScript, Meteorjs, Nodejs,
-                MongoDB, React, Chakra-ui, Tailwindcss, Bootstrap and basic
-                knowledge in Blaze and Firebase.
+                I have skills in Html, Css/scss, JavaScript, Meteor.js, Node.js,
+                MongoDB, React, Chakra-ui, Tailwindcss, Bootstrap, blaze, firebase and basic
+                knowledge in Swift. I have been doing these since the year 2019 August.
               </p>
               <div className="mt-8 sm:flex" data-aos="zoom-in-right"></div>
             </div>

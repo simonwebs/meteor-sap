@@ -35,6 +35,10 @@ body {
   background-size: cover;
 }
 
+.lottie {
+  height: 400px;
+}
+
 #nav {
   background-image: url('./img/bg-header-desktop.png');
   background-repeat: no-repeat;
