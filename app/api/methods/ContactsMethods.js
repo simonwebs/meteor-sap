@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Meteor } from 'meteor/meteor';
 import { check } from 'meteor/check';
 import { ContactsCollection } from '../collections/ContactsCollection';
@@ -43,5 +44,10 @@ Meteor.methods({
     check(contactId, String);
 
     ContactsCollection.remove(contactId);
+  },
+  'contacts.update'({ contactId }) {
+    check(contactId, String);
+
+    ContactsCollection.update(contactId);
   },
 });

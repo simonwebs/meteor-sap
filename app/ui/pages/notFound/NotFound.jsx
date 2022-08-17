@@ -21,10 +21,10 @@ export const NotFound = () => (
                 Go back home
               </a>
               <a
-                href="contactForm"
+                href="contact"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-cyan-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
               >
-                Contact Us
+                Contact Me
               </a>
             </div>
           </div>

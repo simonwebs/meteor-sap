@@ -1,4 +1,5 @@
-import React, {useEffect} from 'react';
+// @ts-nocheck
+import React, { useEffect } from 'react';
 import { Fragment } from 'react';
 import { Tab } from '@headlessui/react';
 import AOS from 'aos';
@@ -11,11 +12,12 @@ const tabs = [
       {
         name: 'MongoDB. Express, React, Node.js',
         description:
-          'This app was develop with Node.js, React, Tailwindcss, mongoDB and Ant Design. It is use by Cedar Christian Bilingual School to track their income and expense.',
+          'This app is developed with Node.js, React, Tailwindcss, mongoDB and Ant Design. The demo at heroku is used by Cedar Christian Bilingual School to track their income and expenses.',
         imageSrc:
-          'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-01.jpg',
+          './img/tracker.png',
         imageAlt:
-          'Maple organizer base with slots, supporting white polycarbonate trays of various sizes.',
+          'swed-money-simon-agbey.',
+          link1: 'Click here to see live demo',
       },
     ],
   },
@@ -25,11 +27,12 @@ const tabs = [
       {
         name: 'Meteor, React, Tailwind',
         description:
-          'This app was develop with Node.js, React, Tailwindcss and Ant Design. It is use by Cedar Christian Bilingual School to track their income and expense',
+          'This app was developed with Node.js, React, Tailwindcss, mongoDB and Ant Design. It is used by Cedar Christian Bilingual School to track their income and expenses.',
         imageSrc:
-          'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-02.jpg',
+        './img/tracker.png',
         imageAlt:
           'Walnut organizer base with pen, sticky note, phone, and bin trays, next to modular drink coaster attachment.',
+          link2: 'Click here to see live demo',
       },
     ],
   },
@@ -41,9 +44,11 @@ const tabs = [
         description:
           "Our customers use Organize throughout the house to bring efficiency to many daily routines. Enjoy Organize in your workspace, kitchen, living room, entry way, garage, and more. We can't wait to see how you'll use it!",
         imageSrc:
-          'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-03.jpg',
+        './img/tracker.png',
         imageAlt:
           'Walnut organizer base with white polycarbonate trays in the kitchen with various kitchen utensils.',
+          link3: 'Click here to see live demo',
+         
       },
     ],
   },
@@ -55,9 +60,10 @@ const tabs = [
         description:
           'The Organize base set includes the pen, phone, small, and large trays to help you group all your essential items. Expand your set with the drink coaster and headphone stand add-ons.',
         imageSrc:
-          'https://tailwindui.com/img/ecommerce-images/product-feature-06-detail-04.jpg',
+        './img/tracker.png',
         imageAlt:
           'Walnut organizer system on black leather desk mat on top of white desk.',
+          link4: 'Click here to see live demo',
       },
     ],
   },
@@ -69,15 +75,18 @@ function classNames(...classes) {
 
 export const Projects = () => {
   useEffect(() => {
-    AOS.init({
-      delay: 200,
-      duration: 1200,
-      once: false,
-      // @ts-ignore
-    }, []);
+    AOS.init(
+      {
+        delay: 200,
+        duration: 1200,
+        once: false,
+        // @ts-ignore
+      },
+      []
+    );
   });
   return (
-    <div className="bg-transparent dark:bg-slate-900 shadow-sm shadow-cyan-900/50">
+    <div className="bg-slate-700  dark:bg-slate-900 shadow-sm shadow-cyan-900/50">
       <section
         aria-labelledby="features-heading"
         className="max-w-6xl mx-auto py-32 sm:px-2 lg:px-8"
@@ -86,11 +95,12 @@ export const Projects = () => {
           <div className="max-w-3xl">
             <h2
               id="features-heading"
-              className="text-4xl font-bold text-center dark:text-white" data-aos="flip-left"
+              className="text-4xl font-bold text-center text-white dark:text-white"
+              data-aos="flip-left"
             >
               Projects
             </h2>
-            <p className="mt-4 text-slate-500 dark:text-gray-500">
+            <p className="mt-4 text-slate-50 dark:text-gray-50">
               These are some of the projects am working on.
             </p>
           </div>
@@ -105,8 +115,8 @@ export const Projects = () => {
                       className={({ selected }) =>
                         classNames(
                           selected
-                            ? 'border-sky-400 text-sky-600 dark:text-sky-400'
-                            : 'border-transparent dark:text-gray-200 hover:text-gray-700 hover:border-gray-300',
+                            ? 'border-sky-400 text-sky-50 dark:text-sky-400'
+                            : ' text-white dark:text-gray-200 hover:text-sky-400',
                           'whitespace-nowrap py-6 border-b-2 font-medium text-sm'
                         )
                       }
@@ -126,16 +136,39 @@ export const Projects = () => {
                       key={feature.name}
                       className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8"
                     >
-                      <div className="mt-6 lg:mt-0 lg:col-span-5">
-                        <h3 className="text-lg font-medium text-gray-900 dark:text-sky-400">
+                      <div className="mt-6 lg:mt-0 lg:col-span-5 hover:transition duration-500 hover:scale-125">
+                        <h3 className="text-lg font-medium text-sky-400 dark:text-sky-400">
                           {feature.name}
                         </h3>
-                        <p className="mt-2 text-sm text-gray-500 dark:text-slate-300">
+                        <p className="mt-2 text-sm text-gray-50 dark:text-slate-300">
                           {feature.description}
+                        </p>
+                        
+                        <p className="mt-2 text-md text-sky-500 dark:text-sky-500 hover:underline decoration-3 decoration-pink-500 underline-offset-8">
+                       
+                        <a href='http://swed-money.herokuapp.com/register'>
+                        {feature.link1}
+                       </a>
+                     
+                        </p>
+                        <p className="mt-2 text-sm text-sky-500 dark:text-sky-500 hover:underline decoration-3 decoration-pink-500 underline-offset-8">
+                        <a href='projects'>
+                        {feature.link2}
+                       </a>
+                        </p>
+                        <p className="mt-2 text-sm text-sky-500 dark:text-sky-500 hover:underline decoration-3 decoration-pink-500 underline-offset-8">
+                        <a href='projects'>
+                        {feature.link3}
+                       </a>
+                        </p>
+                        <p className="mt-2 text-sm text-sky-500 dark:text-sky-500 hover:underline decoration-3 decoration-pink-500 underline-offset-8">
+                        <a href='projects'>
+                        {feature.link4}
+                       </a>
                         </p>
                       </div>
                       <div className="lg:col-span-7">
-                        <div className="aspect-w-2 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden sm:aspect-w-5 sm:aspect-h-2">
+                        <div className="group aspect-w-2 aspect-h-1 rounded-lg overflow-hidden sm:relative sm:aspect-none sm:h-full hover:transition duration-500 hover:scale-125">
                           <img
                             src={feature.imageSrc}
                             alt={feature.imageAlt}

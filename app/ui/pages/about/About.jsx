@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -15,28 +16,33 @@ const about = [
 ];
 
 export const About = () => {
-
   useEffect(() => {
-    AOS.init({
-      delay: 200,
-      duration: 1200,
-      once: false,
-    // @ts-ignore
-    }, []);
-   });
+    AOS.init(
+      {
+        delay: 200,
+        duration: 1200,
+        once: false,
+        // @ts-ignore
+      },
+      []
+    );
+  });
   return (
-    <div className="mt-16 bg-transparent dark:bg-slate-900 shadow-md">
+    <div className="mt-16 bg-slate-700 dark:bg-slate-900 shadow-md">
       <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
-        <h2 className="text-3xl dark:text-sky-400 font-extrabold tracking-tight sm:text-4xl" data-aos="flip-left">
+        <h2
+          className="mt-5 text-3xl text-sky-400 dark:text-sky-400 font-extrabold tracking-tight sm:text-4xl"
+          data-aos="flip-left"
+        >
           About
         </h2>
         <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
           <div className="space-y-5 sm:space-y-4">
-
-            <p className="text-xl dark:text-slate-300" data-aos="flip-left">
-            I'm a Fullstack web developer located in Ghana. I have a passion for frontend and backend development.
-              I am well organised person, believe in problem solving in diverse way.
-              One thing I like about myself is I'm not tired of learning new things.
+            <p className="text-xl text-white dark:text-slate-300" data-aos="flip-left">
+              I'm a Fullstack web developer in Ghana. I have passion for
+              front-end and back-end development. I am a well organised person,
+              I solve problems in diverse ways. One thing I love about myself is
+              I'm never tired of learning new things.
             </p>
           </div>
           <div className="lg:col-span-2" data-aos="fade-left">
@@ -47,26 +53,34 @@ export const About = () => {
               {about.map(about => (
                 <li key={about.name} className="sm:py-8">
                   <div className="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
-                    <div className="flex items-center aspect-w-3 aspect-h-2 bg-[#03050f56] rounded-3xl sm:aspect-w-3 sm:aspect-h-4">
-                      <img
-                        className="object-cover" data-aos="zoom-in"
+                    <div className="flex items-center aspect-w-3 aspect-h-2 bg-[#03050f56] rounded-2xl sm:aspect-w-3 sm:aspect-h-4 hover:transition duration-700 hover:scale-125">
+                    <a
+                       href="about">
+                       <img
+                        className="object-cover rounded-3xl px-4 transform motion-safe:hover:scale-110"
+                        data-aos="zoom-in"
                         src={about.imageUrl}
                         alt=""
                       />
+                </a>
                     </div>
                     <div className="sm:col-span-2">
                       <div className="space-y-4">
-                        <div className="text-lg dark:text-slate-300 leading-6 font-medium space-y-1">
+                        <div className="text-lg text-sky-400 dark:text-slate-300 leading-6 font-medium space-y-1">
                           <h3 className="dark:text-sky-400">{about.name}</h3>
                         </div>
                         <div className="text-lg">
-                          <p className="dark:text-slate-300">{about.bio}</p>
+                          <p className="text-white dark:text-slate-300">{about.bio}</p>
                         </div>
-                        <ul role="list" className="flex space-x-5" data-aos="flip-right">
+                        <ul
+                          role="list"
+                          className="flex space-x-5"
+                          data-aos="flip-right"
+                        >
                           <li>
                             <a
                               href={about.twitterUrl}
-                              className="dark:text-sky-400 hover:text-sky-400"
+                              className="text-sky-400 dark:text-sky-400 hover:text-sky-400"
                             >
                               <span className="sr-only">Twitter</span>
                               <svg
@@ -82,7 +96,7 @@ export const About = () => {
                           <li>
                             <a
                               href={about.linkedinUrl}
-                              className="dark:text-sky-400 hover:bg-gray-500"
+                              className="text-sky-400 dark:text-sky-400 hover:bg-gray-500"
                             >
                               <span className="sr-only">LinkedIn</span>
                               <svg

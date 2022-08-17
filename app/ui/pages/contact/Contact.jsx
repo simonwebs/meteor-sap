@@ -73,11 +73,11 @@ export const Contact = () => {
     <>
       <section
         id="contact"
-        className="pt-10 pb-36 px-8 bg-slate-100 dark:bg-slate-900 rounded-lg py-8 ring-1 ring-slate-900/5 shadow-xl"
+        className="pt-10 pb-36 px-8 bg-slate-700 dark:bg-slate-900 rounded-lg py-8 ring-1 ring-slate-900/5 shadow-xl"
       >
         <div className="max-w-6xl mx-auto">
           <h2
-            className="text-4xl font-bold text-center mt-20 dark:text-gray-50"
+            className="text-4xl font-bold text-center mt-20 text-gray-50 dark:text-gray-50"
             data-aos="fade-left"
           >
             Contact Me
@@ -85,7 +85,7 @@ export const Contact = () => {
 
         </div>
         <div className="relative max-w-4xl mx-auto shadow-sm shadow-cyan-900/50">
-          <div className="relative z-20 bg-slate-100 dark:bg-slate-900 rounded p-8">
+          <div className="relative z-20 bg-slate-600 dark:bg-slate-900 rounded-lg p-8">
             <form action="" data-aos="fade-up">
               {error && <ErrorAlert message={error} />}
               {success && <SuccessAlert message={success} />}
@@ -98,7 +98,7 @@ export const Contact = () => {
                   onChange={e => setName(e.target.value)}
                   placeholder="Full Name"
                   autoComplete="name"
-                  className="bg-white dark:bg-slate-800 dark:text-gray-50 shadow-md px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-300"
+                  className="bg-slate-300 dark:bg-slate-800 dark:text-gray-50 shadow-md px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-300"
                 />
 
                 <input
@@ -107,7 +107,7 @@ export const Contact = () => {
                   value={email}
                   onChange={e => setEmail(e.target.value)}
                   placeholder="Email"
-                  className="bg-white dark:bg-slate-800 dark:text-gray-50 shadow-md px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-300"
+                  className="bg-slate-300 dark:bg-slate-800 dark:text-gray-50 shadow-md px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-300"
                 />
 
                 <input
@@ -116,7 +116,7 @@ export const Contact = () => {
                   value={subject}
                   onChange={e => setSubject(e.target.value)}
                   placeholder="Subject"
-                  className="bg-white dark:bg-slate-800 dark:text-gray-50  shadow-md px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2"
+                  className="bg-slate-300 dark:bg-slate-800 dark:text-gray-50  shadow-md px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2"
                 />
 
                 <textarea
@@ -124,7 +124,7 @@ export const Contact = () => {
                   id="message"
                   value={message}
                   onChange={e => setMessage(e.target.value)}
-                  className="bg-white dark:bg-slate-800 dark:text-gray-50 shadow-md px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2"
+                  className="bg-slate-300 dark:bg-slate-800 dark:text-gray-50 shadow-md px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2"
                   // @ts-ignore
                   rows="5"
                   placeholder="Message"
@@ -139,7 +139,7 @@ export const Contact = () => {
                     value={agreed}
                     onClick={() => setAgreed((Agreed) => !Agreed)}
                     className={classNames(
-                      agreed ? 'bg-sky-600' : 'bg-gray-500',
+                      agreed ? 'bg-sky-600' : 'bg-gray-600',
                       'relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200'
                     )}
                   >
@@ -154,13 +154,13 @@ export const Contact = () => {
                   </Switch>
                 </div>
                 <div className="ml-3">
-                  <p className="text-base text-gray-500 dark:text-gray-300">
+                  <p className="text-base text-gray-50 dark:text-gray-300">
                     By selecting this, you agree to the{' '}
-                    <a href="#" className="font-medium text-gray-700 underline dark:text-gray-300">
+                    <a href="privacy" className="font-medium text-gray-50 underline hover:underline decoration-3 decoration-pink-500 underline-offset-8 dark:text-gray-300">
                       Privacy Policy
                     </a>{' '}
                     and{' '}
-                    <a href="#" className="font-medium text-gray-700 underline dark:text-gray-300">
+                    <a href="cookie" className="font-medium text-gray-50 underline hover:underline decoration-3 decoration-pink-500 underline-offset-8 dark:text-gray-300">
                       Cookie Policy
                     </a>
                     .

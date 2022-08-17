@@ -77,12 +77,12 @@ export const Navbar = () => {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className="flex-shrink-0 flex items-center">
+                <div className="flex-shrink-0 flex items-center hover:transition duration-500 hover:scale-125">
                   <Link to={RoutePaths.ROOT}>
                     <img
-                      className="hidden lg:block h-8 w-auto"
+                      className="hidden lg:block h-8 w-auto rounded-full shadow-lg shadow-cyan-500/50"
                       src="/img/simon.png"
-                      alt="Meteor"
+                      alt="Meteor-simon-agbey-logo"
                     />
                   </Link>
                 </div>
@@ -214,7 +214,7 @@ export const Navbar = () => {
                   <button
                     type="button"
                     onClick={handleThemeSwitch}
-                    className="bg-transparent text-md font-bold shadow-lg shadow-cyan-900/50 dark:bg-slate-900 relative inline-flex items-center px-3 py-1 border border-transparent dark:text-white hover:bg-sky-500/80 hover:text-white rounded-r-full"
+                    className="text-md font-bold dark:bg-slate-900 relative inline-flex items-center px-3 py-1 border border-transparent dark:text-white dark:hover:bg-sky-500/80 hover:bg-sky-500/80 hover:text-white rounded-r-full"
                   >
                     {theme === 'dark' ? '🌙' : '🌞'}
                   </button>

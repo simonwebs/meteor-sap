@@ -7,5 +7,6 @@ export const RoutePaths = {
     CONTACT: 'contact',
     SKILLS: 'skills',
     PROJECTS: 'projects',
-};
-   
+    PRIVACY: 'privacy',
+    COOKIE: 'cookie',
+}

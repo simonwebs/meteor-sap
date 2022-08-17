@@ -1,6 +1,24 @@
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Inter-roman.var.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/Inter-italic.var.woff2') format('woff2');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 ::before,
 ::after {
@@ -30,54 +48,6 @@ body {
   box-sizing: border-box;
   min-height: 100%;
   margin: 0;
-  background-image: url('./img/background-faqs.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.lottie {
-  height: 400px;
-}
-
-#nav {
-  background-image: url('./img/bg-header-desktop.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 75;
-}
-
-#hero {
-  background-image: url('./img/bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#skills {
-  background-image: url('./img/background-faqs.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#projects {
-  background-image: url('./img/background-faqs.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#testimonials {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#contact {
-  background-image: url('./images/abstract-background.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#footer {
-  background-image: url('./img/background-faqs.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #cool-loader {
@@ -129,8 +99,4 @@ body {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-}
-
-.lottie {
-  height: 400px;
 }
