@@ -22,9 +22,9 @@ export const Home = () => {
    });
   return (
     <main>
-      <section className="mt-20 mx-auto bg-backdrop-blur-md bg-white/30 dark:bg-slate-700 rounded-2xl dark:shadow-md dark:shadow-cyan-500/50 max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
+      <section className="mt-20 mx-auto bg-backdrop-blur-md bg-white/30 dark:bg-slate-700 rounded-2xl dark:shadow-md dark:shadow-cyan-500/50 max-w-7xl px-4 md:mt-32 sm:mt-32 sm:px-6 lg:mt-26">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-            <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left hover:transition duration-700 hover:scale-125">
+            <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
               <h1>
                 <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl" data-aos="flip-left">
                   <span className="block text-slate-900 dark:text-white">Hello, I'm</span>
@@ -59,7 +59,7 @@ export const Home = () => {
             </div>
             <div className="mt-12 bg-gray-100 dark:bg-slate-700 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
            
-              <div className="relative pb-10 mx-auto w-full rounded-lg lg:max-w-md hover:transition duration-700 hover:scale-125">
+              <div className="relative pb-10 mx-auto w-full rounded-lg hover:transition duration-500 hover:scale-125 lg:max-w-md">
                 <button
                   type="button"
                   className="relative block w-full bg-transparent rounded-2xl shadow-lg shadow-cyan-900/50  overflow-hidden"data-aos="zoom-in"

@@ -18,7 +18,7 @@ const testimonials = [
   [
     {
       content:
-        'I used to have to remit tax to the EU and with Swed I somehow don’t have to do that anymore. Nervous to travel there now though.',
+      'There are so many things I had to do with my old software that I just don’t do at all with Swed. Suspicious but I can’t say I don’t love it.',
       author: {
         name: 'Simon Agbey',
         role: 'Founder of Swed Inc',
@@ -29,7 +29,7 @@ const testimonials = [
   [
     {
       content:
-        'I used to have to remit tax to the EU and with Swed I somehow don’t have to do that anymore. Nervous to travel there now though.',
+      'There are so many things I had to do with my old software that I just don’t do at all with Swed. Suspicious but I can’t say I don’t love it.',
       author: {
         name: 'Simon Agbey',
         role: 'Founder of Swed Inc',
@@ -64,10 +64,10 @@ export const Testimonials = () => {
               Testimonals
             </h2>
           </div>
-          <ul className="p-8 bg-transparent mx-auto shadow-lg mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3">
+          <ul className="p-4 bg-transparent mx-auto shadow-lg mt-10 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-10 lg:max-w-none lg:grid-cols-3">
             {testimonials.map((column, columnIndex) => (
               <li key={columnIndex}>
-                <ul className="space-y-6 sm:space-y-8 bg-transparent dark:slate-800 hover:transition duration-500 hover:scale-125">
+                <ul className="space-y-6 sm:space-y-8 bg-transparent dark:slate-800">
                   {column.map((testimonial, testimonialIndex) => (
                     <li key={testimonialIndex}>
                       <figure className="relative rounded-2xl bg-transparent dark:bg-slate-800 dark:text-slate-300 p-6 shadow-slate-900/10">
@@ -76,7 +76,7 @@ export const Testimonials = () => {
                             {testimonial.content}
                           </p>
                         </blockquote>
-                        <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                        <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-800 dark:border-slate-100 pt-6">
                           <div>
                             <div className="font-display text-sky-00 dark:text-sky-400">
                               {testimonial.author.name}
@@ -85,7 +85,7 @@ export const Testimonials = () => {
                               {testimonial.author.role}
                             </div>
                           </div>
-                          <div className="h-14 w-14 overflow-hidden rounded-full bg-transparent hover:transition duration-500 hover:scale-125">
+                          <div className="h-14 w-14 overflow-hidden rounded-full bg-transparent">
                             <img src={testimonial.author.imageSrc} alt="" />
                           </div>
                         </figcaption>

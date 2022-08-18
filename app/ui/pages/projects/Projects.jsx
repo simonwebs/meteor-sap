@@ -136,7 +136,7 @@ export const Projects = () => {
                       key={feature.name}
                       className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-x-8"
                     >
-                      <div className="mt-6 lg:mt-0 lg:col-span-5 hover:transition duration-500 hover:scale-125">
+                      <div className="mt-6 lg:mt-0 lg:col-span-5">
                         <h3 className="text-lg font-medium text-sky-400 dark:text-sky-400">
                           {feature.name}
                         </h3>
@@ -168,7 +168,7 @@ export const Projects = () => {
                         </p>
                       </div>
                       <div className="lg:col-span-7">
-                        <div className="group aspect-w-2 aspect-h-1 rounded-lg overflow-hidden sm:relative sm:aspect-none sm:h-full hover:transition duration-500 hover:scale-125">
+                        <div className="group aspect-w-2 aspect-h-1 rounded-lg overflow-hidden sm:hover:bg-gray-400 sm:hover:ring-sky-400 sm:relative sm:aspect-none sm:h-full hover:transition duration-300 hover:scale-111">
                           <img
                             src={feature.imageSrc}
                             alt={feature.imageAlt}

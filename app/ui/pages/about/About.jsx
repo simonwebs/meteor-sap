@@ -28,7 +28,7 @@ export const About = () => {
     );
   });
   return (
-    <div className="mt-16 bg-slate-700 dark:bg-slate-900 shadow-md">
+    <div className="mt-16 bg-slate-700 dark:bg-slate-900 shadow-lg">
       <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <h2
           className="mt-5 text-3xl text-sky-400 dark:text-sky-400 font-extrabold tracking-tight sm:text-4xl"
@@ -38,12 +38,17 @@ export const About = () => {
         </h2>
         <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
           <div className="space-y-5 sm:space-y-4">
+
             <p className="text-xl text-white dark:text-slate-300" data-aos="flip-left">
-              I'm a Fullstack web developer in Ghana. I have passion for
+            I'm a Fullstack web developer in Ghana. I have passion for
               front-end and back-end development. I am a well organised person,
-              I solve problems in diverse ways. One thing I love about myself is
+              I solve 
+  <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+    <span class="relative text-white">problems</span>
+  </span>
+  in diverse ways. One thing I love about myself is
               I'm never tired of learning new things.
-            </p>
+              </p>
           </div>
           <div className="lg:col-span-2" data-aos="fade-left">
             <ul
@@ -53,11 +58,11 @@ export const About = () => {
               {about.map(about => (
                 <li key={about.name} className="sm:py-8">
                   <div className="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
-                    <div className="flex items-center aspect-w-3 aspect-h-2 bg-[#03050f56] rounded-2xl sm:aspect-w-3 sm:aspect-h-4 hover:transition duration-700 hover:scale-125">
+                    <div className="group flex items-center aspect-w-3 aspect-h-2 bg-[#03050f27] rounded-2xl shadow-lg sm:aspect-w-3 sm:aspect-h-4 sm:hover:bg-gray-300 sm:hover:ring-sky-400">
                     <a
                        href="about">
                        <img
-                        className="object-cover rounded-3xl px-4 transform motion-safe:hover:scale-110"
+                        className="object-cover rounded-3xl px-4"
                         data-aos="zoom-in"
                         src={about.imageUrl}
                         alt=""
