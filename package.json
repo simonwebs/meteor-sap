@@ -1,5 +1,5 @@
 {
-  "name": "meteor-simon-portfolio",
+  "name": "simonagbey-portfolio",
   "private": true,
   "scripts": {
     "start": "meteor run --exclude-archs web.browser.legacy,web.cordova",
